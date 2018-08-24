@@ -1,2 +1,2 @@
-# twitter-small-analytics
+# Twitter Small Analytics
 Integração com a API Twitter4J
