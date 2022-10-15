@@ -12,16 +12,16 @@ public class Auth {
 		if (twitter == null) {
 			AccessToken accessToken = loadAccessToken();
 			twitter = TwitterFactory.getSingleton();
-			twitter.setOAuthConsumer("DOeGDBUn94FsjVJCYFIvWhV3X", 
-					"ArpL2Bs2zoKgczDXBDyzxTNXnRgJfsayOJFOI2I5Ew3hMukdk1");
+			twitter.setOAuthConsumer("", 
+					"");
 			twitter.setOAuthAccessToken(accessToken);
 		}
 		return twitter;
 	}
 
 	private static AccessToken loadAccessToken() {
-		String token = "146149556-vOZlvXHjKCGwMCBN0RmLRzEyaZE9mmOp0639Aua1";
-		String tokenSecret = "xhYP9v1ofbcCjIo1E6mJBIHM4aIkKdBPU3Z4NOGzRsLCE";
+		String token = "";
+		String tokenSecret = "";
 		return new AccessToken(token, tokenSecret);
 	}
 
