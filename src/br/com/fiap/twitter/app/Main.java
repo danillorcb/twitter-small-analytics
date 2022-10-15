@@ -14,7 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		String hashtag = "#java10";
-		String mention = "@michelpf";
+		String mention = "@";
 		
 		Busca busca = null;
 		try {
@@ -55,7 +55,7 @@ public class Main {
 			tweet.append("RTs: " + totalSemana + "\n");
 			tweet.append("\n");
 			
-			//Mapeando as Favoritações
+			//Mapeando as FavoritaÃ§Ãµes
 			Map<String, Long> quantidadeFavoritesPorDia = busca.getQuantidadeFavoritesPorDia();
 			quantidadeFavoritesPorDia.forEach(
 				(dia, quantidade) -> tweet.append(dia + ":" + quantidade + "\n")
@@ -66,13 +66,13 @@ public class Main {
 			tweet.append("FAVs: " + totalSemana + "\n");
 			tweet.append("\n");
 
-			//Mostrando primeiro e último autor da lista
-			tweet.append("1° e último autor\n");
+			//Mostrando primeiro e Ãºltimo autor da lista
+			tweet.append("1Â° e Ãºltimo autor\n");
 			tweet.append(busca.getPrimeiroAutorPorNome() + "\n");
 			tweet.append(busca.getUltimoAutorPorNome() + "\n");
 			tweet.append("\n");
 			
-			//Mostrando primeira e última data da lista
+			//Mostrando primeira e Ãºltima data da lista
 			DateFormat df = new SimpleDateFormat("dd/MM");
 			tweet.append("Data +/- recente\n");
 			tweet.append(df.format(busca.getDataMaisRecente()) + "\n");
@@ -83,7 +83,7 @@ public class Main {
 			
 			postaTweet(tweet.toString());
 			
-			//Somente para teste, para verificar a saída e quantidade de caracteres antes de usar o método postaTweet()
+			//Somente para teste, para verificar a saÃ­da e quantidade de caracteres antes de usar o mÃ©todo postaTweet()
 //			System.out.println(tweet);
 //			System.out.println(tweet.length());
 		}
